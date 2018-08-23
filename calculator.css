@@ -1,3 +1,10 @@
+*, :after, :before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: 300 14px/1.4 Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 body {
     margin: 0;
     font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -16,14 +23,15 @@ h1{
     width: 100px;
     height: 13px;
 }
-p{
+.footerText{
     color: darkgray;
     display: block;
     font-size: 12px;
 }
 .disPlay{
     background: white;
-    height: 500px;
+    height: 350px;
+
 }
 .container{
     width: 100%;
@@ -67,6 +75,235 @@ form{
     position: absolute;
     background-size: contain;
     animation: 1s linear 0s normal none infinite rotate;
+}
+.model{
+    position: relative;
+    display: flex;
+    text-align: center;
+    width: 1050px;
+    height: 76px;
+    margin: -70px 100px 30px;
+}
+.content{
+    display: inline-block;
+    width: 130px;
+    position: relative;
+    margin-left: 5px;
+}
+.number{
+    font-size: 40px;
+    font-weight: normal;
+    font-family: 'RobotoNormal';
+    display: block;
+    padding: 0 18px 0 0;
+    position: relative;
+    color: #008dff;
+    text-align: right;
+    
+}
+.number:after {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'RobotoNormal';
+    content: 'MI';
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+.pic{
+    height: 15px;
+    background-size: auto 13px;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.settingSection{
+    display:flex;
+    /* height: 100px; */
+}
+.settingText{
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+.option{
+    display: block;
+    width: 100%;
+    
+}
+.speedContainer{
+    float: left;
+    width: 230px;
+    margin: 10px 0 0;
+    padding-right: 40px;
+}
+.temperatureContainer{
+    float: left;
+    width: 420px;
+    padding: 0 40px;
+    margin: 10px 40px 0 0;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    
+}
+.tempButtonWraper{
+    display: flex;
+    align-items: center
+}
+.wheelContainer{
+    float: left;
+    width: 355px;
+}
+.temperatureSetting{
+    position: relative;
+    width: 180px;
+    height: 60px;
+    border: 1px solid #ccc;
+    display: flex;
+    padding: 0 0 0 30px;
+    margin: 0 8px 0 0;
+    background-color: #f7f7f7;
+    background-position: 24.21053% 9px;
+    background-repeat: no-repeat;
+    background-size: 44px;
+    
+    /* width: 100%; */
+}
+.speedSetting{
+    /* margin: 10px 0 0; */
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ccc;
+    display: flex;
+    padding: 0 0 0 30px;
+    margin: 0 8px 0 0;
+    background-color: #f7f7f7;
+    background-position: 24.21053% 9px;
+    background-repeat: no-repeat;
+    background-size: 44px;
+}
+.numberofSpeed, .numberoftemperature{
+    font-family: 'RobotoNormal';
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+}
+.temperaturebuttonBox, .buttonBox{
+    /* float: left; */
+    width: 30px;
+    height: 46px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+.tempwraper{
+    width: 230px;
+}
+button{
+    width: 30px;
+    height: 23px;
+    border: none;
+    background-color: #f7f7f7;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+
+}
+.speedUpButton, .temperatureUpButton{
+    border-bottom: solid;
+    border-bottom-color: #ccc;
+    border-bottom-width: thin;
+    background-image: url(https://toddmotto.com/angular-tesla-range-calculator/assets/counter/up.svg)
+}
+.speedDownButton,.temperatureDownButton{
+    background-image: url(https://toddmotto.com/angular-tesla-range-calculator/assets/counter/down.svg)
+}
+.wheelContainer{
+    width: 355px;
+}
+.wheelpair{
+    display: flex;
+    margin: 10px 0 0;
+}
+.wheelpairone{
+    background-image: url(https://toddmotto.com/angular-tesla-range-calculator/assets/wheels/19.svg);
+}
+.wheelpairtwo{
+    background-image: url(https://toddmotto.com/angular-tesla-range-calculator/assets/wheels/21.svg);
+}
+.wheelpairone, .wheelpairtwo{
+    border-color: #39f;
+    box-shadow: inset 0px 0px 0px 1px #39f;
+    cursor: pointer;
+    width: 47%;
+    height: 60px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px 0 0 90px;
+    margin: 10px 20px 0 0;
+    background-color: #f7f7f7;
+    background-position: 24.21053% 9px;
+    background-repeat: no-repeat;
+    background-size: 44px;
+}
+
+.wheelSize, .temp{
+    display: none;
+
+}
+.wheelIndex{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: 'RobotoNormal';
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+span{
+    height: 17px;
+    width: 31px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+p{
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.temperatureButton{
+    float: left;
+}
+.tButton{
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 6px solid #f7f7f7;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #666;
+    background: #33a0ff;;
+}
+.buttonText{
+    margin: 14px 0 0;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff
+}
+.tempItem{
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 8px auto 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url(https://toddmotto.com/angular-tesla-range-calculator/assets/climate/ac-on.svg);
 }
 @keyframes rotate{
     from{transform:rotate(0deg)}

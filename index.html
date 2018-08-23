@@ -1,36 +1,121 @@
 <!DOCTYPE html>
 <head>
     <title>Angular Tesla Range Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
-    <header class="header">
+    <div class="header">
         <img class="logo" src="asset/logo.svg">
-    </header>
+    </div>
     <section class="container">
         <form>
             <h1>Range Per Charge</h1>
             <div class="disPlay">
                 <div class="carPic">
-                    <!-- <img src="" alt=""> -->
+                    <div class="wheels">
+                        <div class="wheel1"></div>
+                        <div class="wheel2"></div>
+                    </div>
                 </div>
                 <div class="model">
-                    
+                    <div class="content">
+                        <img class="pic" src="https://toddmotto.com/angular-tesla-range-calculator/assets/models/60.svg">
+                        <div class="number" id = "pic60">246</div>
+                    </div>
+                    <div class="content">
+                        <img class="pic" src="https://toddmotto.com/angular-tesla-range-calculator/assets/models/60d.svg">
+                        <div class="number" id = "pic60D">250</div>
+                    </div>
+                    <div class="content">
+                        <img class="pic" src="https://toddmotto.com/angular-tesla-range-calculator/assets/models/75.svg">
+                        <div class="number" id = "pic75">297</div>
+                    </div>
+                    <div class="content">
+                        <img class="pic" src="https://toddmotto.com/angular-tesla-range-calculator/assets/models/75d.svg">
+                        <div class="number" id = "pic75D">306</div>
+                    </div>
+                    <div class="content">
+                        <img class="pic" src="https://toddmotto.com/angular-tesla-range-calculator/assets/models/90d.svg">
+                        <div class="number" id = "pic90D">336</div>
+                    </div>
+                    <div class="content">
+                        <img class="pic" src="https://toddmotto.com/angular-tesla-range-calculator/assets/models/p100d.svg">
+                        <div class="number" id = "picP100D">376</div>
+                    </div>
                 </div>
             </div>
             <div class="option">
-
-                <p>
-                    The actual amount of range that you experience will vary based 
-                    on your particular use conditions. See how particular use conditions 
-                    may affect your range in our simulation model.
-                </p>
-                <p>
-                    Vehicle range may vary depending on the vehicle configuration, 
-                    battery age and condition, driving style and operating, environmental 
-                    and climate conditions.
-                </p>
+                <div class="settingSection" >
+                    <div class="speedContainer">
+                        <p class="settingText">Speed</p>
+                        <div class="speedSetting" id="speed">
+                            <p class="numberofSpeed">
+                                55
+                                <span class = "speedUnit">
+                                        mph
+                                </span>
+                            </p>
+                            <div class="buttonBox">
+                                <button class="speedUpButton"></button>
+                                <button class="speedDownButton"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="temperatureContainer">
+                           
+                            <div class="tempButtonWraper">
+                                <div class="tempwraper">
+                                <p class="settingText">Outside Temperature</p>
+                                <div class="temperatureSetting" id="temperature">
+                                    <p class="numberoftemperature">
+                                            20
+                                            <span class = "temperatureUnit">
+                                                    °
+                                            </span>
+                                        </p>
+                                        <div class="temperaturebuttonBox">
+                                            <button class="temperatureUpButton"></button>
+                                            <button class="temperatureDownButton"></button>
+                                        </div>
+                                </div>
+                                </div>
+                                <div class="temperatureButton" id = "temperatureButton">
+                                    <label class="tButton">
+                                        <p class="buttonText">AC ON</p>
+                                        <i class="tempItem"></i>
+                                        <input class="temp" type="checkbox">
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="wheelContainer">
+                        <p class="settingText">Wheels</p>
+                        <div class="wheelpair">
+                            <div class="wheelpairone">
+                                <input class="wheelSize" type="radio" value="19">
+                                <p class="wheelIndex" id="wheelSize1">19"</p>
+                            </div>
+                            <div class="wheelpairtwo">
+                                    <input class="wheelSize" type="radio" value="21">
+                                    <p class="wheelIndex" id="wheelSize1">21"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p class = "footerText">
+                        The actual amount of range that you experience will vary based 
+                        on your particular use conditions. See how particular use conditions 
+                        may affect your range in our simulation model.
+                    <br/>
+                        Vehicle range may vary depending on the vehicle configuration, 
+                        battery age and condition, driving style and operating, environmental 
+                        and climate conditions.
+                    </p>
+                </div>
             </div>
         </form>
     </section>
+    <script src="calculator.js"></script>
 </body>
 </html>
